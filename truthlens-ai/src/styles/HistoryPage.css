@@ -1,0 +1,166 @@
+/* History Page Styles */
+.history-page {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-page.dark {
+  background-color: #0f172a;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  min-height: calc(100vh - 70px);
+  overflow: hidden;
+}
+
+.page-header {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.history-page.dark .page-header {
+  border-bottom-color: #374151;
+}
+
+.header-title h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.history-page.dark .header-title h1 {
+  color: #f3f4f6;
+}
+
+.page-subtitle {
+  font-size: 16px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.history-page.dark .page-subtitle {
+  color: #6b7280;
+}
+
+.clear-history-btn {
+  padding: 10px 20px;
+  background-color: #fee2e2;
+  color: #dc2626;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.history-page.dark .clear-history-btn {
+  background-color: #7f1d1d;
+  color: #fca5a5;
+}
+
+.clear-history-btn:hover {
+  background-color: #dcfce7;
+}
+
+.history-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.history-table-section {
+  min-height: fit-content;
+}
+
+.result-details-section {
+  position: sticky;
+  top: 20px;
+  display: grid;
+  gap: 20px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.history-page.dark .details-header {
+  border-bottom-color: #374151;
+}
+
+.details-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.history-page.dark .details-header h3 {
+  color: #f3f4f6;
+}
+
+.close-details {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #9ca3af;
+  transition: all 0.3s ease;
+}
+
+.close-details:hover {
+  color: #2563eb;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .history-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .result-details-section {
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .header-title h1 {
+    font-size: 24px;
+  }
+
+  .history-layout {
+    padding: 20px;
+  }
+}

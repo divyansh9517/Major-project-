@@ -1,0 +1,142 @@
+/* Confidence Chart Styles */
+.confidence-chart {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.confidence-chart.dark {
+  background-color: #1f2937;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.chart-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 25px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.confidence-chart.dark .chart-title {
+  color: #f3f4f6;
+}
+
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.chart-wrapper {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confidence-chart.dark .chart-wrapper {
+  background-color: #111827;
+}
+
+.chart-wrapper h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2563eb;
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.confidence-chart.dark .chart-wrapper h4 {
+  color: #60a5fa;
+}
+
+.doughnut-wrapper {
+  position: relative;
+  min-height: 300px;
+}
+
+.bar-wrapper {
+  position: relative;
+  min-height: 300px;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding-top: 20px;
+  border-top: 2px solid #e5e7eb;
+  flex-wrap: wrap;
+}
+
+.confidence-chart.dark .chart-legend {
+  border-top-color: #374151;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.confidence-chart.dark .legend-item {
+  color: #e5e7eb;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.legend-color.real {
+  background-color: #22c55e;
+}
+
+.legend-color.fake {
+  background-color: #ef4444;
+}
+
+/* Canvas styling for charts */
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .confidence-chart {
+    padding: 20px;
+  }
+
+  .charts-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .doughnut-wrapper,
+  .bar-wrapper {
+    min-height: 250px;
+  }
+
+  .chart-legend {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .legend-item {
+    justify-content: center;
+  }
+}

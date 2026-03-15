@@ -1,0 +1,250 @@
+/* History Table Styles */
+.history-table-wrapper {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.history-table-wrapper.dark {
+  background-color: #1f2937;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.history-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.history-table-wrapper.dark .history-title {
+  color: #f3f4f6;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.history-table thead {
+  background-color: #f3f4f6;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.history-table-wrapper.dark .history-table thead {
+  background-color: #111827;
+  border-bottom-color: #374151;
+}
+
+.history-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 700;
+  color: #1f2937;
+  user-select: none;
+}
+
+.history-table-wrapper.dark .history-table th {
+  color: #f3f4f6;
+}
+
+.history-table th.sortable {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.history-table th.sortable:hover {
+  background-color: #e5e7eb;
+}
+
+.history-table-wrapper.dark .history-table th.sortable:hover {
+  background-color: #1f2937;
+}
+
+.sort-indicator {
+  color: #2563eb;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.history-row {
+  border-bottom: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.history-table-wrapper.dark .history-row {
+  border-bottom-color: #374151;
+}
+
+.history-row:hover {
+  background-color: #f9fafb;
+}
+
+.history-table-wrapper.dark .history-row:hover {
+  background-color: #374151;
+}
+
+.history-table td {
+  padding: 16px;
+  color: #374151;
+}
+
+.history-table-wrapper.dark .history-table td {
+  color: #e5e7eb;
+}
+
+.date-column {
+  font-size: 13px;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+.history-table-wrapper.dark .date-column {
+  color: #6b7280;
+}
+
+.content-column {
+  max-width: 250px;
+}
+
+.content-preview {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #374151;
+}
+
+.history-table-wrapper.dark .content-preview {
+  color: #e5e7eb;
+}
+
+.prediction-column {
+  min-width: 150px;
+}
+
+.prediction-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.confidence-column {
+  min-width: 150px;
+}
+
+.confidence-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.confidence-value {
+  font-weight: 700;
+  min-width: 40px;
+  text-align: right;
+}
+
+.mini-bar {
+  flex: 1;
+  height: 6px;
+  background-color: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+  min-width: 80px;
+}
+
+.history-table-wrapper.dark .mini-bar {
+  background-color: #374151;
+}
+
+.mini-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s ease-out;
+}
+
+/* Empty State */
+.history-empty {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.history-table-wrapper.dark .history-empty {
+  background-color: #111827;
+}
+
+.empty-message {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 10px 0;
+}
+
+.history-table-wrapper.dark .empty-message {
+  color: #f3f4f6;
+}
+
+.empty-subtitle {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.history-table-wrapper.dark .empty-subtitle {
+  color: #6b7280;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .history-table-wrapper {
+    padding: 20px;
+    overflow-x: auto;
+  }
+
+  .history-table {
+    font-size: 12px;
+    min-width: 600px;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 12px 8px;
+  }
+
+  .content-column {
+    max-width: 150px;
+  }
+
+  .prediction-badge {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .empty-message {
+    font-size: 16px;
+  }
+
+  .history-empty {
+    padding: 40px 20px;
+  }
+}
